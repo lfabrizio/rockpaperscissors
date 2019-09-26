@@ -8,4 +8,16 @@ const rock_div = document.getElementById("r"); // get the button rock
 const paper_div = document.getElementById("p"); // get the button paper
 const scissors_div = document.getElementById("s"); // get the button scissors
 // now we have cached the DOM ( storing for future use)
+// now what happenes when you click on them buttons 
+rock_div.addEventListener('click', function() {
+    console.log("hey, you clicked on rock");
+})
+
+paper_div.addEventListener('click', function() {
+    console.log("hey, you clicked on paper");
+})
+
+scissors_div.addEventListener('click', function() {
+    console.log("hey, you clicked on scissors");
+})
 
