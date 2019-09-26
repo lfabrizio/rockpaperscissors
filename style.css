@@ -80,3 +80,11 @@ position: relative;
     cursor: pointer;
     background: #24272E;
 }
+
+#action-message {
+    text-align: center;
+    color: white;
+    font-family: Asap, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
