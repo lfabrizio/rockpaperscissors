@@ -18,7 +18,7 @@ function getComputerChoice() {
 }
 function game(userChoice){
 const computerChoice = getComputerChoice();
-
+// use switch statments
 }
 
 
