@@ -1,9 +1,9 @@
-const userScore = 0;
+let userScore = 0;
 const computerScore = 0;
 const userScore_span = document.getElementById("user-score"); // to show its in a span tag
 const computerScore_span = document.getElementById("computer-score"); // and DOM variable
 const scoreBoard_div = document.querySelector(".score-board"); // to show its in a div tag
-const result_div = document.querySelector(".result");
+const result_p = document.querySelector(".result > p");
 const rock_div = document.getElementById("r"); // get the button rock
 const paper_div = document.getElementById("p"); // get the button paper
 const scissors_div = document.getElementById("s"); // get the button scissors
@@ -16,23 +16,40 @@ function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3)
     return choices[randomNumber];
 }
+
+function win (userChoice, computerChoice) {
+    userScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = userChoice + " beats " + computerChoice + ". You Win! ";
+}
+
+function lose () {
+
+}
+
+function draw () {
+
+}
+
+
 function game(userChoice){
 const computerChoice = getComputerChoice();
 switch (userChoice + computerChoice) {
-    case "rp":
+    case "rs":
     case "pr":
     case "sp":
-        console.log("USER WINS.");
+    win(userChoice, computerChoice);
         break;
         case "rp":
         case "ps":
         case "sr":
-        console.log("USER LOSES");
+    lose(userChoice, computerChoice);
         break;
         case "rr":
         case "pp":
         case "ss":
-            console.log("Its a Draw");
+    draw(userChoice, computerChoice);
             break;
 }
 
